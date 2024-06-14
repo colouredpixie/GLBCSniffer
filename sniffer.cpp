@@ -1,16 +1,20 @@
-#include <iostream>
+#include "socket.h"
+#include "print.h"
 
-int main() {
+int main() 
+{
+    // Create a raw socket
+    raw newRawSocket;
 
-// create raw socket
+    // Use raw socket to loop through all the trafic and get info on screen real-time
+    while (true) {
+        // Receive packet
+        newRawSocket.receivePacket();
 
-// use raw socket to loop through all the trafic
-
-// get info on screen real-time
-
-// show trafic summary
-
-// exit option
+        // Get packet info and total traffic summary
+        printout::printInfo(newRawSocket.eth, newRawSocket.ip);
+        printout::printSum(newRawSocket.sum);
+    }
 
     return 0;
 }
