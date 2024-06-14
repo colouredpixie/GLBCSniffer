@@ -13,7 +13,7 @@ int main()
 
         // Get packet info and total traffic summary
         printout::printInfo(newRawSocket.eth, newRawSocket.ip);
-        printout::printSum(newRawSocket.sum);
+        printout::printSum(newRawSocket.packetCount, newRawSocket.total);
     }
 
     return 0;
