@@ -4,7 +4,6 @@ Requirements:
 - Use C/C++ for implementation.
 - Console application. No UI is required.
 - Use Make file for build/link/clean instructions.
-- Things to google: "RAW socket"
 
 1. Implement Sniffer application.
 - Application should use RAW sockets
