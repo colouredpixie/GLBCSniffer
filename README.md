@@ -1,12 +1,5 @@
-Requirements:
-- Use Linux for implementation. (or virtual machine with Linux)
-- Use GCC for compilation.
-- Use C/C++ for implementation.
-- Console application. No UI is required.
-- Use Make file for build/link/clean instructions.
+## Linux sniffer / packet analyzer console app
+**C/C++ implementation, compiled using G++ Makefile _(requires SU rights to have access to socket)_**
 
-1. Implement Sniffer application.
-- Application should use RAW sockets
-- Application should monitor how much data your PC sends/receives over the network.
-- Application should summarize all packet’s sizes to have calculation results.
-- Application should provide statistics in real-time.
+App uses RAW socket to capture all device packets and analyses ethernet and IP headers to get source and destination adresses.
+Summary is provided real-time to the console using ANSI colours and IO manipulators.
