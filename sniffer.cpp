@@ -8,12 +8,12 @@ int main()
 
     // Use raw socket to loop through all the trafic and get info on screen real-time
     while (true) {
-        // Receive packet
+        // Receive each packet
         newRawSocket.receivePacket();
 
-        // Get packet info and total traffic summary
-        printout::printInfo(newRawSocket.eth, newRawSocket.ip);
-        printout::printSum(newRawSocket.packetCount, newRawSocket.total);
+        // Print packet info and total traffic summary 
+        print::printInfo(newRawSocket.getInfo());
+        print::printSum(newRawSocket.getCount(), newRawSocket.getTotal());
     }
 
     return 0;
