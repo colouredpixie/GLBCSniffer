@@ -35,7 +35,7 @@ public:
     void receivePacket() {
         int data_size = recvfrom(sockfd, buffer, BUFSIZE, 0, &saddr, &saddrLen);    
         if (data_size < 0) {
-            std::cout << "Receive header data failed" << std::endl;
+            std::cout << "Receival of packet header data failed" << std::endl;
             return;
         }
 
